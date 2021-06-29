@@ -1,4 +1,4 @@
-import styles from "./Navbar.modules.scss";
+import styles from "./Navbar.module.scss";
 
 // Send GET request to coingecko for HBAR prices in future
 
