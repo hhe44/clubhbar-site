@@ -1,8 +1,11 @@
-import styles from '../styles/Home.module.scss'
+import styles from "../styles/Home.module.scss";
+import Navbar from "../components/Navbar";
 
 const Home = () => {
   return (
-    <h1 className={styles.test}>Hello World!</h1>
-  )
-}
+    <>
+      <Navbar />
+    </>
+  );
+};
 export default Home;

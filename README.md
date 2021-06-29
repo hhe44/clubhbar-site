@@ -15,5 +15,7 @@ https://trello.com/b/I1rH4SBK/hbar-site
 ### Guides used throughout Development:
 * [CoinGecko API Documentation](https://www.coingecko.com/api/documentations/v3#/coins/get_coins_list)
 * [Next.js Env Tweak](https://github.com/vercel/next.js/issues/9690)
+* [Next.js Image Layout Examples](https://github.com/vercel/next.js/blob/canary/examples/image-component/pages/layout-fill.js)
+* [Next.js Image Layout Discussion](https://github.com/vercel/next.js/discussions/18739)
 * [Next.js Font Optimization](https://nextjs.org/docs/basic-features/font-optimization)
 * [Next.js Sass Setup + Mixins](https://www.freecodecamp.org/news/how-to-use-sass-with-css-modules-in-next-js/)
