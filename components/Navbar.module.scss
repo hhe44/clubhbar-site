@@ -1,6 +1,6 @@
 @import "../styles/theme.scss";
 
-.container {
+.nav-container {
   width: 100%;
   height: 8rem;
   display: flex;
@@ -13,7 +13,7 @@
   color: $main-text-color;
 }
 
-.center {
+.nav-links {
   width: 33%;
   height: 100%;
   display: flex;
@@ -22,11 +22,11 @@
   list-style-type: none;
   padding: 0;
   li {
-    padding-left: 1rem;
+    padding-left: 0.5rem;
   }
 }
 
-.right {
+.nav-price {
   width: 33%;
   height: 100%;
   display: flex;
