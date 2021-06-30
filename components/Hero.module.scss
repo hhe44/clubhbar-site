@@ -1,3 +1,15 @@
-.container {}
-.yt-container {}
-.logo {}
+.bgWrap {
+    height: 66vh;
+    width: 100vw;
+    position: fixed;
+    overflow: hidden;
+    z-index: -1;
+    // Calculation below removes gap between background & navbar)
+    top: (calc(8rem - 2px));
+  }
+  
+  .bgText {
+    height: 66vh;
+    width: 100vw;
+    margin: 0;
+  }
