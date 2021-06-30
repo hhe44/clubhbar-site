@@ -1,10 +1,10 @@
-import Image from 'next/image'
+import Image from "next/image";
 import styles from "./Hero.module.scss";
-import background from "../public/images/clubhbar-hashgraph-bg.svg"
+import background from "../public/images/clubhbar-hashgraph-bg.svg";
 
 const Hero = () => {
   return (
-    <div>
+    <div className={styles.heroContainer}>
       {/* 
         Next/Image Background Example below:
         https://github.com/vercel/next.js/blob/canary/examples/image-component/pages/background.js
@@ -18,11 +18,11 @@ const Hero = () => {
           quality={100}
         />
       </div>
-      <p className={styles.bgText}>
-        Image Component
-        <br />
-        as a Background
-      </p>
+      <div className={styles.contentWrap}>
+        <div>
+        </div>
+        <h1>The Largest HBAR Community on the Net</h1>
+      </div>
     </div>
   );
 };

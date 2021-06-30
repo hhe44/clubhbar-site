@@ -1,15 +1,24 @@
+@import "../styles/theme.scss";
+
+.heroContainer {
+  font-family: $text-font;
+  font-weight: $text-weight;
+  color: $main-text-color;
+}
+
 .bgWrap {
-    height: 66vh;
-    width: 100vw;
-    position: fixed;
-    overflow: hidden;
-    z-index: -1;
-    // Calculation below removes gap between background & navbar)
-    top: (calc(8rem - 2px));
-  }
-  
-  .bgText {
-    height: 66vh;
-    width: 100vw;
+  height: 66vh;
+  width: 100vw;
+  position: fixed;
+  overflow: hidden;
+  z-index: -1;
+  background-color: $main-bg-color;
+}
+
+.contentWrap {
+  height: 66vh;
+  width: 100vw;
+  h1 {
     margin: 0;
   }
+}
