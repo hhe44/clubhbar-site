@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./Hero.module.scss";
 import background from "../public/images/clubhbar-hashgraph-bg.svg";
+import logo from "../public/images/clubhbar-logo.svg";
 
 const Hero = () => {
   return (
@@ -18,10 +19,26 @@ const Hero = () => {
           quality={100}
         />
       </div>
-      <div className={styles.contentWrap}>
-        <div>
+      <div className={styles.content}>
+        <div className={styles.topWrap}>
+          <div className={styles.video}>
+            <iframe
+              src={`https://www.youtube.com/embed/JzFXZvTrEnI`}
+              frameBorder="0"
+            />
+          </div>
+          <div style={{ position: "relative", width: "38rem", height: "28rem" }}>
+            <Image
+              src={logo}
+              layout="fill"
+              objectFit="cover"
+              alt="ClubHbar Logo"
+            />
+          </div>
         </div>
-        <h1>The Largest HBAR Community on the Net</h1>
+        <div className={styles.bottomWrap}>
+          <h1>The Largest HBAR Community on the Net</h1>
+        </div>
       </div>
     </div>
   );

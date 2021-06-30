@@ -13,6 +13,7 @@
     "normalize.css": "^8.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-modal": "^3.14.3",
     "sass": "^1.35.1"
   },
   "devDependencies": {

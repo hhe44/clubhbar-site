@@ -2,12 +2,7 @@ import Image from "next/image";
 import styles from "./Navbar.module.scss";
 import logo from "../public/images/clubhbar-logo.svg";
 
-
-
-const Navbar = () => {
-
-  // Send GET request to coingecko for HBAR prices HERE
-
+const Navbar = ({ price }) => {
   return (
     <div className={styles.navContainer}>
       {/* 
@@ -15,13 +10,8 @@ const Navbar = () => {
         https://github.com/vercel/next.js/blob/canary/examples/image-component/pages/layout-fill.js
         The exception to this rule are background images
       */}
-      <div style={{ position: 'relative', width: '11rem', height: '8rem' }}>
-        <Image
-          src={logo}
-          layout='fill'
-          objectFit="cover"
-          alt="ClubHbar Logo"
-        />
+      <div style={{ position: "relative", width: "11rem", height: "8rem" }}>
+        <Image src={logo} layout="fill" objectFit="cover" alt="ClubHbar Logo" />
       </div>
       <ul className={styles.navLinks}>
         <li>LEARN</li>
@@ -32,7 +22,7 @@ const Navbar = () => {
       <div className={styles.navPrice}>
         <h4>Largest Hbar Community on the Net</h4>
         <div>
-          <p>Current HBAR Price: </p>
+          <p>{`Current HBAR Price: ${price}`}</p>
         </div>
       </div>
     </div>
