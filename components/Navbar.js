@@ -1,8 +1,22 @@
 import Image from "next/image";
+import Link from "next/link";
+import React, { useState, useEffect } from "react";
 import styles from "./Navbar.module.scss";
 import logo from "../public/images/clubhbar-logo.svg";
 
-const Navbar = ({ price }) => {
+const COINGECKO_HBAR_PRICE_API = "https://api.coingecko.com/api/v3/simple/price?ids=hedera-hashgraph&vs_currencies=usd";
+
+const Navbar = ({ isHomePage = false }) => {
+
+  const [price, setPrice] = useState({ hbarPrice: 0 });
+  const fetchPrice = async () => {
+    const res = await fetch(`${COINGECKO_HBAR_PRICE_API}`);
+    const data = await res.json();
+    setPrice({ hbarPrice: data["hedera-hashgraph"].usd });
+  };
+  useEffect(() => { fetchPrice() }, []);
+  const { hbarPrice } = price;
+
   return (
     <div className={styles.navContainer}>
       {/* 
@@ -11,18 +25,36 @@ const Navbar = ({ price }) => {
         The exception to this rule are background images
       */}
       <div style={{ position: "relative", width: "11rem", height: "8rem" }}>
-        <Image src={logo} layout="fill" objectFit="cover" alt="ClubHbar Logo" />
+        {!isHomePage && (
+          <Image
+            src={logo}
+            layout="fill"
+            objectFit="cover"
+            alt="ClubHbar Logo"
+          />
+        )}
       </div>
-      <ul className={styles.navLinks}>
-        <li>LEARN</li>
-        <li>NEWS</li>
-        <li>COMMUNITY</li>
-        <li>CHART</li>
-      </ul>
+      <div className={styles.navLinks}>
+        <Link href="/">
+          <a>HOME</a>
+        </Link>
+        <Link href="/learn">
+          <a>LEARN</a>
+        </Link>
+        <Link href="/news">
+          <a>NEWS</a>
+        </Link>
+        <Link href="/community">
+          <a>COMMUNITY</a>
+        </Link>
+        <Link href="/charts">
+          <a>CHARTS</a>
+        </Link>
+      </div>
       <div className={styles.navPrice}>
-        <h4>Largest HBAR Community on the Net</h4>
+        <h4>{!isHomePage ? "Largest HBAR Community on the Net" : ""}</h4>
         <div>
-          <p>{`Current HBAR Price: $${price}`}</p>
+          <p>{`Current HBAR Price: ${hbarPrice}`}</p>
         </div>
       </div>
     </div>
