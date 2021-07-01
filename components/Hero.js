@@ -25,10 +25,12 @@ const Hero = () => {
             <iframe
               src={`https://www.youtube.com/embed/JzFXZvTrEnI`}
               frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen;" 
             />
           </div>
-          <div style={{ position: "relative", width: "38rem", height: "28rem" }}>
+          <div className={styles.logo}>
             <Image
+              alt="clubhbar-logo"
               src={logo}
               layout="fill"
               objectFit="cover"

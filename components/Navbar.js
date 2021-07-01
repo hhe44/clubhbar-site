@@ -20,9 +20,9 @@ const Navbar = ({ price }) => {
         <li>CHART</li>
       </ul>
       <div className={styles.navPrice}>
-        <h4>Largest Hbar Community on the Net</h4>
+        <h4>Largest HBAR Community on the Net</h4>
         <div>
-          <p>{`Current HBAR Price: ${price}`}</p>
+          <p>{`Current HBAR Price: $${price}`}</p>
         </div>
       </div>
     </div>
