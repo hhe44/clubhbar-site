@@ -16,7 +16,8 @@ const Hero = () => {
           src={background}
           layout="fill"
           objectFit="cover"
-          quality={100}
+          objectPosition="top"
+          quality={50}
         />
       </div>
       <div className={styles.content}>
@@ -34,7 +35,7 @@ const Hero = () => {
               src={logo}
               layout="fill"
               objectFit="cover"
-              alt="ClubHbar Logo"
+              quality={50}
             />
           </div>
         </div>

@@ -8,8 +8,8 @@
 
 .bgWrap {
   height: (calc(100vh - 8rem));
-  width: 100vw;
-  position: fixed;
+  width: 100%;
+  position: absolute;
   overflow: hidden;
   z-index: -1;
   background-color: $main-bg-color;

@@ -31,6 +31,7 @@ const Navbar = ({ isHomePage = false }) => {
             layout="fill"
             objectFit="cover"
             alt="ClubHbar Logo"
+            quality={50}
           />
         )}
       </div>
