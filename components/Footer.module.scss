@@ -1,3 +1,24 @@
-.container {}
-.social-media {}
-.disclaimer{}
+@import "../styles/theme.scss";
+
+.container {
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $main-bg-color;
+    font-family: $text-font;
+    font-weight: $text-weight;
+    color: $main-text-color;
+}
+
+.socialMedia {
+    background-color: red;
+}
+
+// See: https://github.com/vercel/next.js/issues/18585
+.container div img {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+}
