@@ -9,8 +9,8 @@ const Footer = () => {
     <>
     <div className={styles.container}>
       <div>
-        <img src="/images/discord-icon.svg" alt="discord" />
-        <img src="/images/twitter-icon.svg" alt="twitter" />
+        <a href="https://discord.gg/jWmEVQeP" target="_"><img src="/images/discord-icon.svg" alt="discord" /></a>
+        <a href="https://twitter.com/HbarWhereTheyAt" target="_"><img src="/images/twitter-icon.svg" alt="twitter" /></a>
         <img src="/images/reddit-icon.svg" alt="reddit" />
       </div>
       <div>
