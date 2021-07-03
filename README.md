@@ -15,9 +15,9 @@ Community project for Hedera Hashgraph enthusiasts, AKA Hashbros, AKA bagholders
 * [Next.js Image Optimization for Dummies](https://www.youtube.com/watch?v=R4sdWUI3-mY)
 * [Next.js Image Woes](https://github.com/vercel/next.js/discussions/18312)
 * [Next.js Sass Setup + Mixins](https://www.freecodecamp.org/news/how-to-use-sass-with-css-modules-in-next-js/)
+* [Package: sanitize-html](https://www.npmjs.com/package/sanitize-html)
 * [React - Airbnb's Approach](https://github.com/airbnb/javascript/tree/master/react)
 * [React - Google's Approach](https://google.github.io/styleguide/jsguide.html#file-name)
-* [React - Sanitize Inner HTML](https://www.youtube.com/watch?v=Cj7-i-S4TwA)
 
 ### Technical Issues / Planned Optimizations
 * Navbar component sends an API request to coingecko for HBAR price at render for every page. It would be ideal to get the data only once thru *getStaticProps* but it's reserved for page components. Will have to try using React Server components as discussed [here](https://github.com/vercel/next.js/discussions/13390).
