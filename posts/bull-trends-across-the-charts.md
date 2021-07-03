@@ -1,6 +1,6 @@
 ---
 title: 'Bull Trends Across the Charts'
-date: '2020-02-02'
+date: '2021-03-08'
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl vel pretium lectus quam id leo in vitae. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt. Auctor augue mauris augue neque gravida in fermentum. Vulputate sapien nec sagittis aliquam. Duis convallis convallis tellus id interdum. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Risus feugiat in ante metus dictum at tempor commodo. Egestas maecenas pharetra convallis posuere morbi leo urna molestie. Phasellus faucibus scelerisque eleifend donec pretium. Turpis tincidunt id aliquet risus. Ultrices gravida dictum fusce ut placerat orci. Urna cursus eget nunc scelerisque viverra mauris in aliquam. Ornare arcu odio ut sem nulla pharetra diam. Cum sociis natoque penatibus et magnis dis parturient montes. Porttitor leo a diam sollicitudin tempor id. Accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Leo in vitae turpis massa sed. Interdum consectetur libero id faucibus nisl tincidunt eget. Sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae.
