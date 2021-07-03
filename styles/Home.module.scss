@@ -1,2 +1,10 @@
+@import "../styles/theme.scss";
+
 .container {
+    width: 100%;
+    height: (calc(100vh - #{$footer-height}));
+    background-color: $main-bg-color;
+    font-family: $text-font;
+    font-weight: $text-weight;
+    color: $main-text-color;
 }

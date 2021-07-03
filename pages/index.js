@@ -5,11 +5,14 @@ import Footer from "../components/Footer";
 
 const Home = () => {
   return (
-    <div className={styles.container}>
+    <>
       <Navbar isHomePage={true} />
       <Hero />
+      <div className={styles.container}>
+        
+      </div>
       <Footer />
-    </div>
+    </>
   );
 };
 export default Home;

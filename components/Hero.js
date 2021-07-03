@@ -5,7 +5,7 @@ import logo from "../public/images/clubhbar-logo.svg";
 
 const Hero = () => {
   return (
-    <div className={styles.heroContainer}>
+    <div className={styles.container}>
       {/* 
         Next/Image Background Example below:
         https://github.com/vercel/next.js/blob/canary/examples/image-component/pages/background.js

@@ -18,7 +18,7 @@ const Navbar = ({ isHomePage = false }) => {
   const { hbarPrice } = price;
 
   return (
-    <div className={styles.navContainer}>
+    <div className={styles.container}>
       {/* 
         Next/Image styling can only be applied using style={{...}} as shown in the example below:
         https://github.com/vercel/next.js/blob/canary/examples/image-component/pages/layout-fill.js
@@ -35,7 +35,7 @@ const Navbar = ({ isHomePage = false }) => {
           />
         )}
       </div>
-      <div className={styles.navLinks}>
+      <div className={styles.links}>
         <Link href="/">
           <a>HOME</a>
         </Link>
@@ -52,7 +52,7 @@ const Navbar = ({ isHomePage = false }) => {
           <a>CHARTS</a>
         </Link>
       </div>
-      <div className={styles.navPrice}>
+      <div className={styles.price}>
         <h4>{!isHomePage ? "Largest HBAR Community on the Net" : ""}</h4>
         <div>
           <p>{`Current HBAR Price: $${hbarPrice}`}</p>
