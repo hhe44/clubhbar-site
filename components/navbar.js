@@ -24,19 +24,19 @@ const Navbar = ({ isHomePage = false }) => {
         https://github.com/vercel/next.js/blob/canary/examples/image-component/pages/layout-fill.js
         The exception to this rule are background images
       */}
-      <div style={{ position: "relative", width: "11rem", height: "8rem" }}>
-        {!isHomePage && (
-          <Link href="/">
-            <Image
-              src={logo}
-              layout="fill"
-              objectFit="cover"
-              alt="ClubHbar Logo"
-              quality={50}
-            />
-          </Link>
-        )}
-      </div>
+      <Link href="/">
+        <div style={{ position: "relative", width: "11rem", height: "8rem" }}>
+          {!isHomePage && (
+              <Image
+                src={logo}
+                layout="fill"
+                objectFit="cover"
+                alt="ClubHbar Logo"
+                quality={50}
+              />
+          )}
+        </div>
+      </Link>
       <div className={styles.links}>
         <Link href="/">
           <a>HOME</a>
