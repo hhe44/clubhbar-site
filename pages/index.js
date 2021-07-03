@@ -4,7 +4,7 @@ import { getSortedPostsData } from '../lib/posts';
 import Navbar from "../components/navbar";
 import Hero from "../components/hero";
 import Footer from "../components/footer";
-import styles from "../styles/Home.module.scss";
+import styles from "../styles/home.module.scss";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
