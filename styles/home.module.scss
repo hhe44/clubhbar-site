@@ -1,14 +1,43 @@
 @import "../styles/theme.scss";
 
 .container {
-    width: 100%;
-    height: (calc(100vh - #{$footer-height}));
-    background-color: $main-bg-color;
-    font-family: $text-font;
-    font-weight: $text-weight;
-    color: $main-text-color;
+  width: 100%;
+  height: $vh-minus-footerh;
+  background-color: $main-bg-color;
+  font-family: $text-font;
+  font-weight: $text-weight;
+  color: $main-text-color;
 }
 
 .posts {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: 0;
+  h3 {
+    text-align: center;
     margin: 0;
+  }
+}
+
+.postWrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+  img {
+    width: 12rem;
+  }
+  div {
+    width: 60%;
+  }
+  h3 {
+    text-align: left;
+  }
+  p {
+    margin: 0.25rem 0rem;
+  }
 }

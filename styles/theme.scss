@@ -12,3 +12,5 @@ $title-weight: 700;
 // Sizing
 $nav-height: 8rem;
 $footer-height: 6rem;
+$vh-minus-navh: (calc(100vh - #{$nav-height}));
+$vh-minus-footerh: (calc(100vh - #{$footer-height}));

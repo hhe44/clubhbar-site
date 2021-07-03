@@ -1,0 +1,12 @@
+@import "../styles/theme.scss";
+
+.container {
+  width: 100%;
+  height: $vh-minus-navh;
+  display: flex;
+  padding: 0 1rem;
+  background-color: $main-bg-color;
+  font-family: $text-font;
+  font-weight: $text-weight;
+  color: $main-text-color;
+}

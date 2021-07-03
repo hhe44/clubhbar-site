@@ -1,20 +1,19 @@
+import Image from "next/image";
 import Link from "next/link";
-import Date from '../components/date';
-import { getSortedPostsData } from '../lib/posts';
+import { getSortedPostsData } from "../lib/posts";
 import Navbar from "../components/navbar";
 import Hero from "../components/hero";
 import Footer from "../components/footer";
 import styles from "../styles/home.module.scss";
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData()
+  const allPostsData = getSortedPostsData();
   return {
     props: {
-      allPostsData
-    }
-  }
+      allPostsData,
+    },
+  };
 }
-
 
 const Home = ({ allPostsData }) => {
   return (
@@ -22,17 +21,22 @@ const Home = ({ allPostsData }) => {
       <Navbar isHomePage={true} />
       <Hero />
       <div className={styles.container}>
-      <ul className={styles.posts}>
-          {allPostsData.map(({ id, date, title }) => (
-            <li key={id}>
+        <div className={styles.posts}>
+          <h3>LATEST NEWS</h3>
+          {allPostsData.map(({ id, title, snippet }) => (
+            <div key={`post_${id}`}>
               <Link href={`/posts/${id}`}>
-                <a>{title}</a>
+                <div className={styles.postWrap}>
+                    <img src={`/images/posts/${id}.png`} />
+                    <div>
+                      <h3>{title}</h3>
+                      <p>{snippet}</p>
+                    </div>
+                </div>
               </Link>
-              <br />
-              <Date dateString={date} />
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
       <Footer />
     </>

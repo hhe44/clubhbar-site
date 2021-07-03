@@ -1,6 +1,7 @@
 ---
 title: 'Hello Future: Why HBAR?'
 date: '2021-04-15'
+snippet: 'The new announcement of council member is announced for Hedera Hashgraph. They announced that a new council member will be the newest council member in a press release that was ultimately about the newest council member for the Hedera Hashgraph Council...[more]'
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum arcu vitae elementum curabitur vitae nunc sed velit dignissim. Felis eget velit aliquet sagittis. Ut venenatis tellus in metus vulputate eu scelerisque felis. Sit amet nulla facilisi morbi tempus iaculis. Nunc sed velit dignissim sodales. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna. Faucibus turpis in eu mi bibendum neque egestas. Turpis egestas maecenas pharetra convallis posuere morbi leo urna. Lorem mollis aliquam ut porttitor leo. Ornare arcu dui vivamus arcu felis bibendum ut. Et ligula ullamcorper malesuada proin libero nunc. Laoreet non curabitur gravida arcu ac tortor dignissim convallis aenean. Viverra vitae congue eu consequat ac. Lobortis elementum nibh tellus molestie nunc non blandit massa. At ultrices mi tempus imperdiet. Lectus magna fringilla urna porttitor rhoncus dolor purus. Elementum sagittis vitae et leo duis ut diam quam nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada. Suspendisse potenti nullam ac tortor.
