@@ -1,6 +1,7 @@
 {
   "extends": ["next", "next/core-web-vitals"],
   "rules": {
+    // Disable rule that doesn't allow for <img> tags
     "@next/next/no-img-element": "off"
   }
 }
