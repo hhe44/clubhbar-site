@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./Hero.module.scss";
+import styles from "./hero.module.scss";
 import background from "../public/images/clubhbar-hashgraph-bgasd.svg";
 import logo from "../public/images/clubhbar-logo.svg";
 

@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Date from '../components/date';
 import { getSortedPostsData } from '../lib/posts';
-import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-import Footer from "../components/Footer";
+import Navbar from "../components/navbar";
+import Hero from "../components/hero";
+import Footer from "../components/footer";
 import styles from "../styles/Home.module.scss";
 
 export async function getStaticProps() {

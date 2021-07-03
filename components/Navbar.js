@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
-import styles from "./Navbar.module.scss";
+import styles from "./navbar.module.scss";
 import logo from "../public/images/clubhbar-logo.svg";
 
 const COINGECKO_HBAR_PRICE_API = "https://api.coingecko.com/api/v3/simple/price?ids=hedera-hashgraph&vs_currencies=usd";
@@ -26,13 +26,15 @@ const Navbar = ({ isHomePage = false }) => {
       */}
       <div style={{ position: "relative", width: "11rem", height: "8rem" }}>
         {!isHomePage && (
-          <Image
-            src={logo}
-            layout="fill"
-            objectFit="cover"
-            alt="ClubHbar Logo"
-            quality={50}
-          />
+          <Link href="/">
+            <Image
+              src={logo}
+              layout="fill"
+              objectFit="cover"
+              alt="ClubHbar Logo"
+              quality={50}
+            />
+          </Link>
         )}
       </div>
       <div className={styles.links}>

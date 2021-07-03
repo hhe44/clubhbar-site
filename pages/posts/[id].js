@@ -1,6 +1,8 @@
 import { getAllPostIds, getPostData } from '../../lib/posts';
 import Head from 'next/head';
-import Date from '../../components/date';
+import date from '../../components/date';
+import Footer from "../../components/footer";
+import Navbar from "../../components/navbar";
 
 export default function Post({ postData }) {
   return (
@@ -8,6 +10,7 @@ export default function Post({ postData }) {
       <Head>
         <title>{postData.title}</title>
       </Head>
+      <Navbar />
       <article>
         <h1>{postData.title}</h1>
         <div>
@@ -15,6 +18,7 @@ export default function Post({ postData }) {
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
+      <Footer />
     </>
   )
 }
