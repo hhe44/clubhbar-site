@@ -55,7 +55,7 @@ const Navbar = ({ isHomePage = false }) => {
       <div className={styles.navPrice}>
         <h4>{!isHomePage ? "Largest HBAR Community on the Net" : ""}</h4>
         <div>
-          <p>{`Current HBAR Price: ${hbarPrice}`}</p>
+          <p>{`Current HBAR Price: $${hbarPrice}`}</p>
         </div>
       </div>
     </div>
