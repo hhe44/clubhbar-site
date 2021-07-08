@@ -3,6 +3,9 @@
 .container {
   width: 100%;
   height: $vh-minus-footerh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: $main-bg-color;
   font-family: $text-font;
   font-weight: $text-weight;

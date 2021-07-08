@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getSortedPostsData } from "../lib/posts";
 import Navbar from "../components/navbar";
 import Hero from "../components/hero";
+import TwitterTimeline from "../components/twitterTimeline";
 import Footer from "../components/footer";
 import styles from "../styles/home.module.scss";
 
@@ -36,6 +37,7 @@ const Home = ({ allPostsData }) => {
             </div>
           ))}
         </div>
+        <TwitterTimeline twtHandle="HbarWhereTheyAt" twtHeight="calc(100vh - 10rem)"/>
       </div>
       <Footer />
     </>

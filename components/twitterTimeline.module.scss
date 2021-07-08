@@ -1,0 +1,10 @@
+@import "../styles/theme.scss";
+
+.container {
+    height: $vh-minus-footerh;
+    width: 25%;
+}
+
+.container iframe {
+    height: $vh-minus-footerh;
+}
