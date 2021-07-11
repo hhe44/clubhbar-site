@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./hero.module.scss";
 import background from "../public/images/clubhbar-hashgraph-bgasd.svg";
 import logo from "../public/images/clubhbar-logo.svg";
+import YtModal from "../components/ytModal";
 
 const Hero = () => {
   return (
@@ -23,11 +24,7 @@ const Hero = () => {
       <div className={styles.content}>
         <div className={styles.topWrap}>
           <div className={styles.video}>
-            <iframe
-              src={`https://www.youtube.com/embed/JzFXZvTrEnI`}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen;" 
-            />
+            <YtModal vidKey={`JzFXZvTrEnI`} />
           </div>
           <div className={styles.logo}>
             <Image

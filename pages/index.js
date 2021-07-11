@@ -3,6 +3,7 @@ import { getSortedPostsData } from "../lib/posts";
 import Navbar from "../components/navbar";
 import Hero from "../components/hero";
 import TwitterTimeline from "../components/twitterTimeline";
+import YtModal from "../components/ytModal";
 import Footer from "../components/footer";
 import styles from "../styles/home.module.scss";
 
