@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import styles from "./navbar.module.scss";
 import logo from "../public/images/clubhbar-logo.svg";
 
@@ -24,7 +24,7 @@ const Navbar = ({ isHomePage = false }) => {
         https://github.com/vercel/next.js/blob/canary/examples/image-component/pages/layout-fill.js
         The exception to this rule are background images
       */}
-      <Link href="/">
+      <Link href="/" passHref>
         <div style={{ position: "relative", width: "11rem", height: "8rem" }}>
           {!isHomePage && (
               <Image
@@ -38,21 +38,11 @@ const Navbar = ({ isHomePage = false }) => {
         </div>
       </Link>
       <div className={styles.links}>
-        <Link href="/">
-          <a>HOME</a>
-        </Link>
-        <Link href="/learn">
-          <a>LEARN</a>
-        </Link>
-        <Link href="/news">
-          <a>NEWS</a>
-        </Link>
-        <Link href="/community">
-          <a>COMMUNITY</a>
-        </Link>
-        <Link href="/charts">
-          <a>CHARTS</a>
-        </Link>
+        <Link href="/">HOME</Link>
+        <Link href="/learn">LEARN</Link>
+        <Link href="/news">NEWS</Link>
+        <Link href="/community">COMMUNITY</Link>
+        <Link href="/charts">CHARTS</Link>
       </div>
       <div className={styles.price}>
         <h4>{!isHomePage ? "Largest HBAR Community on the Net" : ""}</h4>

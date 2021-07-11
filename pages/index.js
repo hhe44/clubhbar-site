@@ -3,7 +3,6 @@ import { getSortedPostsData } from "../lib/posts";
 import Navbar from "../components/navbar";
 import Hero from "../components/hero";
 import TwitterTimeline from "../components/twitterTimeline";
-import YtModal from "../components/ytModal";
 import Footer from "../components/footer";
 import styles from "../styles/home.module.scss";
 
@@ -26,19 +25,25 @@ const Home = ({ allPostsData }) => {
           <h3>LATEST NEWS</h3>
           {allPostsData.map(({ id, title, snippet }) => (
             <div key={`post_${id}`}>
-              <Link href={`/posts/${id}`}>
+              <Link href={`/posts/${id}`} passHref>
                 <div className={styles.postWrap}>
-                    <img src={`/images/posts/${id}.png`} />
-                    <div>
-                      <h3>{title}</h3>
-                      <p>{snippet}</p>
-                    </div>
+                  <img
+                    src={`/images/posts/${id}.png`}
+                    alt={`/images/posts/${id}.png`}
+                  />
+                  <div>
+                    <h3>{title}</h3>
+                    <p>{snippet}</p>
+                  </div>
                 </div>
               </Link>
             </div>
           ))}
         </div>
-        <TwitterTimeline twtHandle="HbarWhereTheyAt" twtHeight="calc(100vh - 10rem)"/>
+        <TwitterTimeline
+          twtHandle="HbarWhereTheyAt"
+          twtHeight="calc(100vh - 10rem)"
+        />
       </div>
       <Footer />
     </>

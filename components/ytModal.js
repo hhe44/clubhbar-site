@@ -11,7 +11,7 @@ const modalStyle = {
     left: 0,
     right: 0,
     bottom: 0,
-    background: "rgb(0, 0, 0, 0.7)"
+    background: "rgb(0, 0, 0, 0.7)",
   },
   content: {
     top: "50%",
@@ -24,11 +24,11 @@ const modalStyle = {
     border: "none",
     backgroundColor: "transparent",
     display: "flex",
-    flexDirection: "column"
-  }
+    flexDirection: "column",
+  },
 };
 
-const ytModal = ({vidKey}) => {
+const YtModal = ({ vidKey }) => {
   const [state, setState] = useState({ showModal: false });
 
   const handleOpenModal = () => {
@@ -36,19 +36,21 @@ const ytModal = ({vidKey}) => {
   };
 
   const handleCloseModal = () => {
-      if(state.showModal){
-        setState({ showModal: false });
-      }
+    if (state.showModal) {
+      setState({ showModal: false });
+    }
   };
 
   return (
     <div onClick={handleCloseModal}>
-      {ReactModal.setAppElement('.app')}
-      <img src={`https://img.youtube.com/vi/${vidKey}/sddefault.jpg`} onClick={handleOpenModal}/>
-      <ReactModal 
-      isOpen={state.showModal} style={modalStyle}>
+      {ReactModal.setAppElement(".app")}
+      <img
+        src={`https://img.youtube.com/vi/${vidKey}/sddefault.jpg`}
+        alt={`https://img.youtube.com/vi/${vidKey}/sddefault.jpg`}
+        onClick={handleOpenModal}
+      />
+      <ReactModal isOpen={state.showModal} style={modalStyle}>
         <iframe
-        //   title={props.title}
           width="100%"
           height="100%"
           src={"https://www.youtube.com/embed/" + vidKey}
@@ -61,4 +63,4 @@ const ytModal = ({vidKey}) => {
   );
 };
 
-export default ytModal;
+export default YtModal;
