@@ -13,7 +13,7 @@ const TwitterTimeline = ({ twtHandle, twtHeight }) => {
           options={{
             theme: "dark",
             height: twtHeight,
-            chrome: "transparent, nofooter",
+            chrome: "transparent, nofooter, noscrollbar, noheader",
             dnt: true
           }}
         />

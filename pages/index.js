@@ -21,8 +21,9 @@ const Home = ({ allPostsData }) => {
       <Navbar isHomePage={true} />
       <Hero />
       <div className={styles.container}>
-        <div className={styles.posts}>
+        <div className={styles.news}>
           <h3>LATEST NEWS</h3>
+          <div className={styles.posts}>
           {allPostsData.map(({ id, title, snippet }) => (
             <div key={`post_${id}`}>
               <Link href={`/posts/${id}`} passHref>
@@ -39,11 +40,15 @@ const Home = ({ allPostsData }) => {
               </Link>
             </div>
           ))}
+          </div>
         </div>
-        <TwitterTimeline
-          twtHandle="HbarWhereTheyAt"
-          twtHeight="calc(100vh - 10rem)"
-        />
+        <div className={styles.twtWrap}>
+          <h3>TWEETS</h3>
+          <TwitterTimeline
+            twtHandle="HbarWhereTheyAt"
+            twtHeight="calc(100vh - 14rem)"
+          />
+        </div>
       </div>
       <Footer />
     </>
