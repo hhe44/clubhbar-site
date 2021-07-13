@@ -29,8 +29,8 @@ const Home = ({ allPostsData }) => {
               <Link href={`/posts/${id}`} passHref>
                 <div className={styles.postWrap}>
                   <img
-                    src={`/images/posts/${id}.png`}
-                    alt={`/images/posts/${id}.png`}
+                    src={`/images/posts/${id}-thumbnail.png`}
+                    alt={`/images/posts/${id}-thumbnail.png`}
                   />
                   <div>
                     <h3>{title}</h3>
