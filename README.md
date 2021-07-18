@@ -15,6 +15,8 @@ Community project for Hedera Hashgraph enthusiasts, AKA Hashbros, AKA bagholders
 * [Next.js Image Optimization for Dummies](https://www.youtube.com/watch?v=R4sdWUI3-mY)
 * [Next.js Image Woes](https://github.com/vercel/next.js/discussions/18312)
 * [Next.js Sass Setup + Mixins](https://www.freecodecamp.org/news/how-to-use-sass-with-css-modules-in-next-js/)
+* [Package: react-tradingview-embed](https://www.npmjs.com/package/react-tradingview-embed)
+* [Package: react-twitter-widgets](https://github.com/andrewsuzuki/react-twitter-widgets)
 * [Package: sanitize-html](https://www.npmjs.com/package/sanitize-html)
 * [React - Airbnb's Approach](https://github.com/airbnb/javascript/tree/master/react)
 * [React - Google's Approach](https://google.github.io/styleguide/jsguide.html#file-name)

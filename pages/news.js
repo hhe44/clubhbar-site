@@ -17,7 +17,7 @@ const News = () => {
             objectPosition="top"
             quality={50}
           />
-        </div>
+      </div>
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.topRow}>

@@ -16,6 +16,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-modal": "^3.14.3",
+    "react-tradingview-embed": "^2.2.6",
     "react-twitter-widgets": "^1.10.0",
     "remark": "^13.0.0",
     "remark-html": "^13.0.1",
