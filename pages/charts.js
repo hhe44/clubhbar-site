@@ -2,10 +2,11 @@ import Navbar from "../components/navbar";
 import {
   AdvancedChart,
   CryptocurrencyMarket,
+  MarketOverview,
   TickerTape,
 } from "react-tradingview-embed";
 import Footer from "../components/footer";
-import styles from "../styles/Charts.module.scss";
+import styles from "../styles/charts.module.scss";
 
 const Charts = () => {
   return (
@@ -26,13 +27,34 @@ const Charts = () => {
           />
         </div>
         <div className={styles.chartsWrap}>
-          <div className={styles.advChart}>
-            <AdvancedChart
-              widgetProps={{
-                theme: "dark",
-                symbol: "BINANCE:HBARUSD",
-              }}
-            />
+          <div className={styles.topCharts}>
+            <div className={styles.advChart}>
+              <AdvancedChart
+                widgetProps={{
+                  theme: "dark",
+                  symbol: "BINANCE:HBARUSD",
+                }}
+              />
+            </div>
+            <div className={styles.mrktOverview}>
+              <MarketOverview
+                widgetProps={{
+                  isTransparent: true,
+                  tabs: [
+                    {
+                      title: "Indices",
+                      symbols: [
+                        { s: "CRYPTOCAP:HBAR", d: "" },
+                        { s: "BINANCE:HBARUSD", d: "" },
+                        { s: "BINANCE:HBARBTC", d: "" },
+                        { s: "BITTREX:HBARETH", d: "" },
+                        { s: "COINBASE:BTCUSD", d: "" },
+                      ],
+                    },
+                  ],
+                }}
+              />
+            </div>
           </div>
           <div className={styles.ccMarket}>
             <CryptocurrencyMarket

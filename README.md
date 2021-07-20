@@ -15,6 +15,8 @@ Community project for Hedera Hashgraph enthusiasts, AKA Hashbros, AKA bagholders
 * [Next.js Image Optimization for Dummies](https://www.youtube.com/watch?v=R4sdWUI3-mY)
 * [Next.js Image Woes](https://github.com/vercel/next.js/discussions/18312)
 * [Next.js Sass Setup + Mixins](https://www.freecodecamp.org/news/how-to-use-sass-with-css-modules-in-next-js/)
+* [Package: next-transpile-modules](https://github.com/martpie/next-transpile-modules#readme)
+* [Package: next-transpile-modules ~ Emile's Research](https://stackoverflow.com/questions/64847988/babylonjs-es6-in-nextjs-failes-with-unexpected-token-export)
 * [Package: react-tradingview-embed](https://www.npmjs.com/package/react-tradingview-embed)
 * [Package: react-twitter-widgets](https://github.com/andrewsuzuki/react-twitter-widgets)
 * [Package: sanitize-html](https://www.npmjs.com/package/sanitize-html)

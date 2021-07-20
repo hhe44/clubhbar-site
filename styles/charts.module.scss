@@ -12,13 +12,24 @@
   align-items: center;
 }
 
+.topCharts {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .advChart {
-    width: 80%;
-    margin: 2rem 0;
+  width: 100%;
+  padding-right: 1rem;
+}
+
+.mrktOverview {
+  padding: 1rem 0;
 }
 
 .ccMarket {
-    width: 80%;
+    width: 90%;
     margin-bottom: 2rem;
     div {
         height: 50vh;
