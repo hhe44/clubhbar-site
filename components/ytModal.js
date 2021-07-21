@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ReactModal from "react-modal";
+import styles from "./ytModal.module.scss";
 
 // CSS modules don't seem to work for the ReactModal... at least in Next.js
 // i.e. overlayClassName = {styles.overlay}
@@ -42,13 +43,15 @@ const YtModal = ({ vidKey }) => {
   };
 
   return (
-    <div onClick={handleCloseModal}>
+    <div className={styles.vidThumbnail} onClick={handleCloseModal}>
       {ReactModal.setAppElement(".app")}
       <img
         src={`https://img.youtube.com/vi/${vidKey}/sddefault.jpg`}
         alt={`https://img.youtube.com/vi/${vidKey}/sddefault.jpg`}
-        onClick={handleOpenModal}
       />
+      <div className={styles.playBtnWrap} onClick={handleOpenModal}>
+        <img src="/images/playbtn.svg"/>
+      </div>
       <ReactModal isOpen={state.showModal} style={modalStyle}>
         <iframe
           width="100%"
