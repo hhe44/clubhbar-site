@@ -1,31 +1,31 @@
 .vidThumbnail {
-    position: relative;
+  position: relative;
 }
 
 .vidThumbnail img {
-    width: 100%;
-    aspect-ratio: 16 / 12;
+  width: 100%;
+  aspect-ratio: 16 / 12;
 }
 
 .playBtnWrap {
-    position: absolute;
-    width: 100%; 
-    height: 100%;
-    top: 0%;
-    left: 0%;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .playBtnWrap img {
-    width: 160px;
-    height: 160px;
-    text-align: center;
+  width: 160px;
+  height: 160px;
+  text-align: center;
 }
 
 .playBtnWrap:hover {
-    // filter: invert(0.15) sepia(1) saturate(48) hue-rotate(360deg);
-    filter: invert(0.10);
+  // filter: invert(0.15) sepia(1) saturate(48) hue-rotate(360deg);
+  filter: invert(0.1);
 }
