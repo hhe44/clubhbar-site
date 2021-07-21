@@ -50,7 +50,7 @@ const YtModal = ({ vidKey }) => {
         alt={`https://img.youtube.com/vi/${vidKey}/sddefault.jpg`}
       />
       <div className={styles.playBtnWrap} onClick={handleOpenModal}>
-        <img src="/images/playbtn.svg"/>
+        <img src="/images/playbtn.svg" alt="playbutton" />
       </div>
       <ReactModal isOpen={state.showModal} style={modalStyle}>
         <iframe
