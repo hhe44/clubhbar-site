@@ -13,6 +13,7 @@ const modalStyle = {
     right: 0,
     bottom: 0,
     background: "rgb(0, 0, 0, 0.7)",
+    zIndex: 10
   },
   content: {
     top: "50%",
