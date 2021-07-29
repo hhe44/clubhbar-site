@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <>
       <div className={styles.container}>
-        <div>
+        <div className={styles.socialMedia}>
           <a href="https://discord.gg/club-hbar" target="_">
             <img src="/images/discord-icon.svg" alt="discord" />
           </a>
