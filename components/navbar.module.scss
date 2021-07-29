@@ -28,7 +28,7 @@
   justify-content: space-evenly;
   font-size: 0.8rem;
   font-weight: 700;
-  padding: 1rem 0;
+  padding-bottom: 1rem;
   @media (min-width: 768px) {
     width: 40%;
     height: 100%;
@@ -65,7 +65,7 @@
   }
   h4 {
     margin: 0 0 1rem 0;
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       display: none;
     }
   }
@@ -73,6 +73,21 @@
     margin: 0 0 1rem 0;
     @media (min-width: 768px) {
       margin: 0;
+    }
+  }
+}
+
+.hide {
+  div:nth-child(1) {
+    display: none;
+  }
+  div:nth-child(2) {
+    padding-top: 1rem;
+    @media (min-width: 768px) {
+      font-size: 1.1rem;
+      a {
+        padding-left: 1rem;
+      }
     }
   }
 }

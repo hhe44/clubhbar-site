@@ -27,3 +27,8 @@ Community project for Hedera Hashgraph enthusiasts, AKA Hashbros, AKA bagholders
 * Navbar component sends an API request to coingecko for HBAR price at render for every page. It would be ideal to get the data only once thru *getStaticProps* but it's reserved for page components. Will have to try using React Server components as discussed [here](https://github.com/vercel/next.js/discussions/13390).
 * You can't apply class names to img or Image components in Next.js when using CSS modules. For example: `Image className = {styles.imageWrap}` will not apply the `imageWrap` class to the component. The workaround to that is to use `Image className="imageWrap"`. This should work for `<img>` as well.
 * In addition to the previous point, it's cumbersome to use CSS selectors on Image components which is comprised of an `<img>` nested inside two `<divs>`. Selecting that nested `<img>` would require syntax like this: `.imageWrap div div img`. [This](https://github.com/vercel/next.js/discussions/18312) discussion may provide more context.
+
+### Screen Width Breakpoints
+* Phone: 320, 360, 480
+* Tablet: 640, 768, 900
+* Desktop: 1200, 1360, 1600, 1920
