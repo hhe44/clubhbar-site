@@ -2,6 +2,7 @@
 
 .container {
   width: 100%;
+  padding: 1rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,7 +28,6 @@
 }
 
 .disclaimer {
-  padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;

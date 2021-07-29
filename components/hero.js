@@ -26,14 +26,17 @@ const Hero = () => {
           <div className={styles.video}>
             <YtModal vidKey={`JzFXZvTrEnI`} />
           </div>
-          <div className={styles.logo}>
-            <Image
-              alt="clubhbar-logo"
-              src={logo}
-              layout="fill"
-              objectFit="cover"
-              quality={50}
-            />
+          <div className={styles.logoWrap}>
+            <div className={styles.logo}>
+              <Image
+                alt="clubhbar-logo"
+                src={logo}
+                layout="fill"
+                objectFit="cover"
+                quality={50}
+              />
+            </div>
+            <h1>The Largest HBAR Community on the Net</h1>
           </div>
         </div>
         <div className={styles.bottomWrap}>

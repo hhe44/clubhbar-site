@@ -10,7 +10,9 @@ $title-font: Roboto;
 $title-weight: 700;
 
 // Sizing
+$mobile-nav-height: 6rem;
 $nav-height: 8rem;
 $footer-height: 6rem;
 $vh-minus-navh: (calc(100vh - #{$nav-height}));
+$vh-minus-mnavh: (calc(100vh - #{$mobile-nav-height}));
 $vh-minus-footerh: (calc(100vh - #{$footer-height}));
