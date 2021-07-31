@@ -58,19 +58,30 @@
     align-items: center;
 
     h1 {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       margin: 0 0 1rem 0;
       text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
       text-align: center;
     }
 
+    @media (min-width:360px){
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+
     @media (min-width:480px){
       flex-direction: row;
-      h1 {margin: 0;}
+      h1 {
+        font-size: 1.5rem;
+        margin: 0;
+      }
     }
 
     @media (min-width:640px){
-      h1 {font-size: 2rem;}
+      h1 {
+        font-size: 1.7rem;
+      }
     }
 
     @media (min-width:768px){
@@ -82,24 +93,27 @@
 }
 
 .video {
-  width: 100%;
-  @media (min-width:420px){
-    width: 90%;
+  width: 90%;
+  @media (min-width:360px){
+    width: 80%;
   }
-  @media (min-width:600px){
+  @media (min-width:420px){
     width: 70%;
   }
-  @media (min-width:640px){
+  @media (min-width:500px){
     width: 60%;
   }
-  @media (min-width:800px){
-    width: 50%;
+  @media (min-width:600px){
+    width: 60%;
   }
-  @media (min-width:900px){
+  @media (min-width:640px){
+    width: 45%;
+  }
+  @media (min-width:800px){
     width: 40%;
   }
-  @media (min-width:1024px){
-    width: 33%;
+  @media (min-width:900px){
+    width: 30%;
   }
 }
 
@@ -109,9 +123,9 @@
   height: 8rem;
   @media (min-width:480px){
     width: 16rem;
-    height: 10rem;
+    height: 8rem;
   }
-  @media (min-width:800px){
+  @media (min-width:768px){
     width: 22rem;
     height: 16rem;
   }
@@ -129,12 +143,16 @@
   display: none;
   height: 20%;
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin: 0;
     text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
   }
 
   @media (min-width:768px){
     display: inline;
+  }
+
+  @media (min-width:900px){
+    h1 {font-size: 2.5rem;}
   }
 }
