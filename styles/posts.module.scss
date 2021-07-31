@@ -2,7 +2,6 @@
 
 .container {
   width: 100%;
-  padding: 1rem 1rem;
   background-color: $main-bg-color;
   font-family: $text-font;
   font-weight: $text-weight;
@@ -18,23 +17,26 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  h1,
-  h3 {
+  h1,h3 {
     margin-bottom: 0;
+  }
+  @media (max-width: 768px) {
+    width: 90%;
+    h1 { font-size: 1.2rem; }
+    h3 { font-size: 1rem; }
   }
 }
 
 .imageWrap {
-  width: 48rem;
-  height: 36rem;
+  aspect-ratio: 12/9;
+  height: 50vw;
   position: relative;
   margin-top: 1rem;
-  @media (max-width: 1200px) {
-    width: 40rem;
-    height: 30rem;
-  }
 }
 
 .postText {
-  margin-top: 0;
+  font-size: 0.9rem;
+  @media (min-width: 600px) {
+    font-size: 1rem;
+  }
 }
