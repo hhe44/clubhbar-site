@@ -20,14 +20,14 @@ const Navbar = ({ isHomePage = false, isChartPage = false }) => {
   const { hbarPrice } = price;
 
   return (
-    <div className={`${styles.container} ${!isHomePage ? "" : styles.hide}`}>
+    <div className={`${styles.container} ${!isHomePage ? "" : styles.hideLogo}`}>
       {/* 
         Next/Image styling can only be applied using style={{...}} as shown in the example below:
         https://github.com/vercel/next.js/blob/canary/examples/image-component/pages/layout-fill.js
         The exception to this rule are background images
       */}
       <Link href="/" passHref>
-        <div style={{ position: "relative", width: "11rem", height: "8rem" }}>
+        <div style={{ position: "relative", width: "11rem", height: "7rem" }}>
           <Image
             src={logo}
             layout="fill"
