@@ -37,7 +37,9 @@
     align-items: flex-end;
     font-weight: 400;
     font-size: 0.9rem;
-    a { padding-left: 0.5rem; }
+    a {
+      padding-left: 0.5rem;
+    }
   }
   @media (min-width: 900px) {
     font-size: 1rem;
@@ -50,13 +52,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  h4 { margin: 0 0 1rem 0; }
+  h4 {
+    margin: 0 0 1rem 0;
+  }
   p {
     font-size: 0.8rem;
     margin: 0 0 1rem 0;
   }
   @media (max-width: 767px) {
-    h4 { display: none; }
+    h4 {
+      display: none;
+    }
   }
   @media (min-width: 900px) {
     width: 33%;
@@ -76,6 +82,7 @@
 }
 
 .hideLogo {
+  height: 4rem;
   div:nth-child(1) {
     display: none;
   }
@@ -89,7 +96,7 @@
     }
     .price {
       position: relative;
-      top: 5px;
+      bottom: 10px;
     }
   }
 }

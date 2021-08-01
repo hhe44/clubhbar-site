@@ -24,30 +24,27 @@ const Home = ({ allPostsData }) => {
         <div className={styles.news}>
           <h3>LATEST NEWS</h3>
           <div className={styles.posts}>
-          {allPostsData.map(({ id, title, snippet }) => (
-            <div key={`post_${id}`}>
-              <Link href={`/posts/${id}`} passHref>
-                <div className={styles.postWrap}>
-                  <img
-                    src={`/images/posts/${id}-thumbnail.png`}
-                    alt={`/images/posts/${id}-thumbnail.png`}
-                  />
-                  <div>
-                    <h3>{title}</h3>
-                    <p>{snippet}</p>
+            {allPostsData.map(({ id, title, snippet }) => (
+              <div key={`post_${id}`}>
+                <Link href={`/posts/${id}`} passHref>
+                  <div className={styles.postWrap}>
+                    <img
+                      src={`/images/posts/${id}-thumbnail.png`}
+                      alt={`/images/posts/${id}-thumbnail.png`}
+                    />
+                    <div>
+                      <h3>{title}</h3>
+                      <p>{snippet}</p>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            </div>
-          ))}
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
         <div className={styles.twtWrap}>
           <h3>TWEETS</h3>
-          <TwitterTimeline
-            twtHandle="HbarWhereTheyAt"
-            twtHeight="calc(100vh - 14rem)"
-          />
+          <TwitterTimeline twtHandle="HbarWhereTheyAt" />
         </div>
       </div>
       <Footer />

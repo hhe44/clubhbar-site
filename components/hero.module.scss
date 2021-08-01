@@ -7,27 +7,20 @@
 }
 
 .bgWrap {
-  height: $vh-minus-mnavh;
+  height: calc(100vh - 4rem);
   width: 100%;
   position: absolute;
   overflow: hidden;
   z-index: -1;
   background-color: $main-bg-color;
-  @media (min-width:768px){
-    height: $vh-minus-navh;
-  }
 }
 
 .content {
-  height: $vh-minus-mnavh;
+  height: calc(100vh - 4rem);
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (min-width:768px){
-    height: $vh-minus-navh;
-    
-  }
 }
 
 .topWrap {
@@ -40,14 +33,14 @@
   justify-content: space-evenly;
   align-items: center;
 
-  @media (min-width:768px){
+  @media (min-width: 768px) {
     height: 80%;
     width: 90%;
     margin: 0;
     flex-direction: row;
   }
 
-  @media (min-width:900px){
+  @media (min-width: 900px) {
     width: 100%;
   }
 
@@ -64,13 +57,13 @@
       text-align: center;
     }
 
-    @media (min-width:360px){
+    @media (min-width: 360px) {
       h1 {
         font-size: 1.5rem;
       }
     }
 
-    @media (min-width:480px){
+    @media (min-width: 480px) {
       flex-direction: row;
       h1 {
         font-size: 1.5rem;
@@ -78,35 +71,36 @@
       }
     }
 
-    @media (min-width:640px){
+    @media (min-width: 640px) {
       h1 {
         font-size: 1.7rem;
       }
     }
 
-    @media (min-width:768px){
+    @media (min-width: 768px) {
       margin: 0;
-      h1 {display: none};
+      h1 {
+        display: none;
+      }
     }
-
   }
 }
 
 .video {
   width: 90%;
-  @media (min-width:360px){
+  @media (min-width: 360px) {
     width: 80%;
   }
-  @media (min-width:420px){
+  @media (min-width: 420px) {
     width: 70%;
   }
-  @media (min-width:500px){
+  @media (min-width: 500px) {
     width: 60%;
   }
-  @media (min-width:800px){
+  @media (min-width: 800px) {
     width: 40%;
   }
-  @media (min-width:900px){
+  @media (min-width: 900px) {
     width: 30%;
   }
 }
@@ -115,19 +109,19 @@
   position: relative;
   width: 11rem;
   height: 8rem;
-  @media (min-width:480px){
+  @media (min-width: 480px) {
     width: 16rem;
     height: 8rem;
   }
-  @media (min-width:768px){
+  @media (min-width: 768px) {
     width: 22rem;
     height: 16rem;
   }
-  @media (min-width:900px){
+  @media (min-width: 900px) {
     width: 26rem;
     height: 20rem;
   }
-  @media (min-width:1200px){
+  @media (min-width: 1200px) {
     width: 32rem;
     height: 24rem;
   }
@@ -142,11 +136,13 @@
     text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
   }
 
-  @media (min-width:768px){
+  @media (min-width: 768px) {
     display: inline;
   }
 
-  @media (min-width:900px){
-    h1 {font-size: 2.5rem;}
+  @media (min-width: 900px) {
+    h1 {
+      font-size: 2.5rem;
+    }
   }
 }
