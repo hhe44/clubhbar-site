@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ReactModal from "react-modal";
 import styles from "./ytModal.module.scss";
 
@@ -21,7 +21,6 @@ const modalStyle = {
     right: "auto",
     bottom: "auto",
     transform: "translate(-50%, -50%)",
-    height: "66.6%",
     aspectRatio: "16 / 9",
     border: "none",
     backgroundColor: "transparent",
@@ -42,6 +41,11 @@ const YtModal = ({ vidKey }) => {
       setState({ showModal: false });
     }
   };
+
+  useEffect(() => {
+    const modalWidth = window.innerWidth < 900 ? "100%" : "66%"
+    modalStyle.content.width = modalWidth;
+  }, []);
 
   return (
     <div className={styles.vidThumbnail} onClick={handleCloseModal}>
