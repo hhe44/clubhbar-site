@@ -31,6 +31,7 @@ const Charts = () => {
             <div className={styles.advChart}>
               <AdvancedChart
                 widgetProps={{
+                  width: "100%",
                   theme: "dark",
                   symbol: "BINANCE:HBARUSD",
                 }}
@@ -39,6 +40,7 @@ const Charts = () => {
             <div className={styles.mrktOverview}>
               <MarketOverview
                 widgetProps={{
+                  width: "100%",
                   isTransparent: true,
                   tabs: [
                     {
