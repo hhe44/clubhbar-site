@@ -25,6 +25,7 @@
 
 .ccMarket {
   width: 100%;
+  height: 100%;
   div {
     height: 80vh;
   }
@@ -38,24 +39,25 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
   }
   .topCharts {
+    padding: 1rem 0;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
   }
   .advChart {
-    height:100%;
+    height: 100%;
   }
   .mrktOverview {
-    height:100%;
+    height: 100%;
     padding: 1rem 0;
   }
   .ccMarket {
     width: 90%;
-    margin-bottom: 2rem;
+    padding-bottom: 3rem;
+    div {
+      height: 100%;
+    }
   }
 }
 
