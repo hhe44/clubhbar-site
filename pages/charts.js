@@ -29,13 +29,17 @@ const Charts = () => {
         <div className={styles.chartsWrap}>
           <div className={styles.topCharts}>
             <div className={styles.advChart}>
+              {/* Interestingly, AdvancedChart applies height: 100% on its parent div... */}
+              <div>
               <AdvancedChart
                 widgetProps={{
                   width: "100%",
+                  height: "100%",
                   theme: "dark",
                   symbol: "BINANCE:HBARUSD",
                 }}
               />
+              </div>
             </div>
             <div className={styles.mrktOverview}>
               <MarketOverview

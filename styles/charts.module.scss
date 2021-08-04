@@ -14,6 +14,7 @@
 }
 
 .advChart {
+  height: 100vh;
   width: 100%;
 }
 
@@ -30,16 +31,23 @@
 }
 
 @media (min-width: 1024px) {
+  .container {
+    height: 200vh;
+  }
   .chartsWrap {
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
   }
   .topCharts {
     display: flex;
     justify-content: space-around;
     align-items: center;
+  }
+  .advChart {
+    height: 100%;
   }
   .mrktOverview {
     padding: 1rem 0;
