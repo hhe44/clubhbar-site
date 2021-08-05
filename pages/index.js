@@ -18,7 +18,7 @@ export async function getStaticProps() {
 const Home = ({ allPostsData }) => {
   return (
     <>
-      <Navbar isHomePage={true} />
+      <Navbar />
       <Hero />
       <div className={styles.container}>
         <div className={styles.news}>

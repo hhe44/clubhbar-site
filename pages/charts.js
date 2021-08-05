@@ -11,7 +11,7 @@ import styles from "../styles/charts.module.scss";
 const Charts = () => {
   return (
     <>
-      <Navbar isChartPage={true} />
+      <Navbar />
       <div className={styles.container}>
         <div className={styles.tickerTapeWrap}>
           <TickerTape
@@ -31,14 +31,14 @@ const Charts = () => {
             <div className={styles.advChart}>
               {/* Interestingly, AdvancedChart applies height: 100% on its parent div... */}
               <div>
-              <AdvancedChart
-                widgetProps={{
-                  width: "100%",
-                  height: "100%",
-                  theme: "dark",
-                  symbol: "BINANCE:HBARUSD",
-                }}
-              />
+                <AdvancedChart
+                  widgetProps={{
+                    width: "100%",
+                    height: "100%",
+                    theme: "dark",
+                    symbol: "BINANCE:HBARUSD",
+                  }}
+                />
               </div>
             </div>
             <div className={styles.mrktOverview}>
