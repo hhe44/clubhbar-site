@@ -40,6 +40,7 @@ const Learn = () => {
             <div className={styles.adoption}>
               <h1>ADOPTION</h1>
               <Tweet tweetId="1401996757479956497" options={{ theme: "dark" }}/>
+              <Tweet tweetId="1402958509206089730" options={{ theme: "dark" }}/>
             </div>
             <div className={styles.hbarShillPane}>
               <h1>WHY HBAR?</h1>
@@ -59,6 +60,10 @@ const Learn = () => {
                 <div>
                   <h3>SECURITY</h3>
                   <YtModal vidKey={`pcToFASnyrc`} />
+                </div>
+                <div>
+                  <h3>STABILITY</h3>
+                  <YtModal vidKey={`mYrTBxfanPU`} />
                 </div>
               </div>
               <div>
