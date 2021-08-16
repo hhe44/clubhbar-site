@@ -25,6 +25,10 @@
   text-align: center;
 }
 
+.playBtnWrap {
+  filter: invert(1);
+}
+
 .playBtnWrap:hover {
   // filter: invert(0.15) sepia(1) saturate(48) hue-rotate(360deg);
   filter: invert(0.1);
