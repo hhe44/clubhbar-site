@@ -11,10 +11,6 @@
   font-family: $text-font;
   font-weight: $text-weight;
   color: $main-text-color;
-  @media (min-width: 900px) {
-    flex-direction: row;
-    justify-content: space-around;
-  }
 }
 
 .container div img {
@@ -33,15 +29,27 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  
   p {
     font-size: 0.8rem;
     margin: 0.3rem;
-    @media (min-width: 600px) {
-      font-size: 0.9rem;
-    }
-    @media (min-width: 768px) {
-      font-size: 1rem;
-    }
+  }
+}
+
+@media (min-width: 600px) {
+  .disclaimer p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .disclaimer p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-around;
   }
 }

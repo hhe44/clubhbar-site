@@ -7,12 +7,6 @@
   font-family: $text-font;
   font-weight: $text-weight;
   color: $main-text-color;
-  @media (min-width: 600px) {
-    padding: 2rem 0;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-  }
 }
 
 .news {
@@ -24,9 +18,6 @@
   h3 {
     margin: 0;
   }
-  @media (min-width: 1200px) {
-    width: 66%;
-  }
 }
 
 .posts {
@@ -34,15 +25,6 @@
   font-size: 0.9rem;
   > div {
     padding-top: 2rem;
-  }
-  @media (min-width: 420px) {
-    font-size: 1rem;
-  }
-  @media (min-width: 600px) {
-    font-size: 0.9rem;
-  }
-  @media (min-width: 900px) {
-    font-size: 1rem;
   }
 }
 
@@ -68,37 +50,7 @@
   p {
     width: 90%;
     margin: 0;
-  }
-  @media (min-width: 360px) {
-    p {
-      width: 80%;
-    }
-  }
-  @media (min-width: 420px) {
-    p {
-      width: 80%;
-    }
-    img {
-      width: 66%;
-    }
-  }
-  @media (min-width: 520px) {
-    p {
-      width: 80%;
-    }
-  }
-  @media (min-width: 1200px) {
-    flex-direction: row;
-    img {
-      width: 25%;
-    }
-    > div {
-      width: 66%;
-    }
-    h3 {
-      width: 80%;
-      text-align:left;
-    }
+    line-height: 115%;
   }
 }
 
@@ -114,15 +66,78 @@
   div {
     height: 100%;
   }
-  @media (max-width: 600px) {
-    height: 100vh;
+}
+
+@media (min-width: 360px) {
+  .postWrap p {
+    width: 80%;
   }
-  @media (min-width: 600px) {
-    h3 {
-      margin: 0 0 1rem 0;
+}
+
+@media (min-width: 420px) {
+  .posts {
+    font-size: 1rem;
+  }
+  .postWrap {
+    p {
+      width: 80%;
+    }
+    img {
+      width: 66%;
     }
   }
-  @media (min-width: 1200px) {
+}
+
+@media (min-width: 520px) {
+  .postWrap p {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .twtWrap {
+    height: 100vh;
+  }
+}
+@media (min-width: 600px) {
+  .container {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  .posts {
+    font-size: 0.9rem;
+  }
+  .twtWrap h3 {
+    margin: 0 0 1rem 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .posts {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .news {
+    width: 66%;
+  }
+  .postWrap {
+    flex-direction: row;
+    img {
+      width: 25%;
+    }
+    > div {
+      width: 66%;
+    }
+    h3 {
+      width: 80%;
+      text-align: left;
+    }
+  }
+  .twtWrap {
     width: 33%;
     position: relative;
     right: 1rem;

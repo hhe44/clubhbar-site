@@ -9,13 +9,6 @@
   font-family: $text-font;
   font-weight: $text-weight;
   color: $main-text-color;
-  @media (min-width: 768px) {
-    height: $nav-height;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
-    padding: 0 2rem 0 0.5rem;
-  }
 }
 
 .container div div img {
@@ -29,22 +22,6 @@
   font-size: 0.8rem;
   font-weight: 700;
   padding: 1rem;
-  @media (min-width: 768px) {
-    width: 40%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    font-weight: 400;
-    font-size: 0.9rem;
-    a {
-      padding-left: 0.5rem;
-    }
-  }
-  @media (min-width: 900px) {
-    font-size: 1rem;
-    width: 33%;
-  }
 }
 
 .price {
@@ -59,15 +36,35 @@
     font-size: 0.8rem;
     margin: 0 0 1rem 0;
   }
-  @media (max-width: 767px) {
-    h4 {
-      display: none;
+}
+
+@media (max-width: 767px) {
+  .price h4 {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    height: $nav-height;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 2rem 0 0.5rem;
+  }
+  .links {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-weight: 400;
+    font-size: 0.9rem;
+    a {
+      padding-left: 0.5rem;
     }
   }
-  @media (min-width: 900px) {
-    width: 33%;
-  }
-  @media (min-width: 768px) {
+  .price {
     width: 40%;
     height: 100%;
     display: flex;
@@ -78,6 +75,16 @@
       margin: 0;
       font-size: 1rem;
     }
+  }
+}
+
+@media (min-width: 900px) {
+  .links {
+    font-size: 1rem;
+    width: 33%;
+  }
+  .price {
+    width: 33%;
   }
 }
 
