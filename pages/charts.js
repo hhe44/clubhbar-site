@@ -50,7 +50,6 @@ const Charts = () => {
                     {
                       title: "Indices",
                       symbols: [
-                        { s: "CRYPTOCAP:HBAR", d: "" },
                         { s: "BINANCE:HBARUSD", d: "" },
                         { s: "BINANCE:HBARBTC", d: "" },
                         { s: "BITTREX:HBARETH", d: "" },
