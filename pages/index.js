@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { getSortedPostsData } from "../lib/posts";
 import Navbar from "../components/navbar";
 import Hero from "../components/hero";
 import TwitterTimeline from "../components/twitterTimeline";
@@ -7,15 +6,14 @@ import Footer from "../components/footer";
 import styles from "../styles/home.module.scss";
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const res = await fetch(`https://clubhbar-strapi.herokuapp.com/home`);
+  const postData = await res.json();
   return {
-    props: {
-      allPostsData,
-    },
+    props: { postData }
   };
 }
 
-const Home = ({ allPostsData }) => {
+const Home = ({ postData }) => {
   return (
     <>
       <Navbar />
@@ -24,17 +22,17 @@ const Home = ({ allPostsData }) => {
         <div className={styles.news}>
           <h3>LATEST NEWS</h3>
           <div className={styles.posts}>
-            {allPostsData.map(({ id, title, snippet }) => (
+            {postData.posts.map(({ id, title, blurb, cover }) => (
               <div key={`post_${id}`}>
                 <Link href={`/posts/${id}`} passHref>
                   <div className={styles.postWrap}>
                     <img
-                      src={`/images/posts/${id}-thumbnail.png`}
-                      alt={`/images/posts/${id}-thumbnail.png`}
+                      src={`https://clubhbar-strapi.herokuapp.com${cover.formats.thumbnail.url}`}
+                      alt={`https://clubhbar-strapi.herokuapp.com${cover.formats.thumbnail.url}`}
                     />
                     <div>
                       <h3>{title}</h3>
-                      <p>{snippet}</p>
+                      <p>{blurb}</p>
                     </div>
                   </div>
                 </Link>

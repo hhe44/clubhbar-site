@@ -1,26 +1,39 @@
-import { getAllPostIds, getPostData } from "../../lib/posts";
 import Head from "next/head";
-import Image from "next/image";
+import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
+import remark from "remark";
+import html from "remark-html";
 import Date from "../../components/date";
 import Footer from "../../components/footer";
 import Navbar from "../../components/navbar";
 import sanitizeHtml from "sanitize-html";
 import styles from "../../styles/posts.module.scss";
 
-export const getStaticPaths = async () => {
-  const paths = getAllPostIds();
-  return { paths, fallback: false };
-};
+export async function getServerSideProps() {
+  const res = await fetch(`https://clubhbar-strapi.herokuapp.com/home`);
+  const postData = await res.json();
+  return {
+    props: { postData },
+  };
+}
 
-export const getStaticProps = async ({ params }) => {
-  const postData = await getPostData(params.id);
-  return { props: { postData } };
-};
+const Post = ({ postData }) => {
 
-export default function Post({ postData }) {
-  const { contentHtml, date, title, id } = postData;
+  const { asPath } = useRouter();
+  const id = asPath.slice(-1);
+  const post = postData.posts[id - 1];
+  const { title, text, cover } = post;
 
-  const cleanHtml = sanitizeHtml(contentHtml);
+  const [content, setContent] = useState({});
+  useEffect(() => {
+    const processRawText = async () => {
+      const result = await remark().use(html).process(text);
+      setContent({ result });
+    };
+    processRawText();
+  }, []);
+  const cleanHtml = sanitizeHtml(content.result);
+
   return (
     <>
       <Head>
@@ -30,20 +43,22 @@ export default function Post({ postData }) {
       <div className={styles.container}>
         <article className={styles.content}>
           <h1>{title}</h1>
-          <h3><Date dateString={date} /></h3>
-          <div className={styles.imageWrap}>
-            <Image
-              alt={id}
-              src={`/images/posts/${id}.png`}
-              layout="fill"
-              objectFit="cover"
-              quality={50}
-            />
-          </div>
-          <div className={styles.postText} dangerouslySetInnerHTML={{ __html: cleanHtml }} />
+          <h3>
+            <Date dateString={post.create_date} />
+          </h3>
+          <img
+            className={styles.cover}
+            src={`https://clubhbar-strapi.herokuapp.com${cover.formats.large.url}`}
+          />
+          <div
+            className={styles.postText}
+            dangerouslySetInnerHTML={{ __html: cleanHtml }}
+          />
+          {/* <div><p>{text}</p></div> */}
         </article>
       </div>
       <Footer />
     </>
   );
-}
+};
+export default Post;
