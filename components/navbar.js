@@ -4,13 +4,12 @@ import { useState, useEffect } from "react";
 import styles from "./navbar.module.scss";
 import logo from "../public/images/clubhbar-logo.svg";
 
-const COINGECKO_HBAR_PRICE_API =
-  "https://api.coingecko.com/api/v3/simple/price?ids=hedera-hashgraph&vs_currencies=usd";
-
 const Navbar = ({ isHomePage = false, isChartPage = false }) => {
   const [price, setPrice] = useState({ hbarPrice: 0 });
   const fetchPrice = async () => {
-    const res = await fetch(`${COINGECKO_HBAR_PRICE_API}`);
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_COINGECKO_URL}/simple/price?ids=hedera-hashgraph&vs_currencies=usd`
+    );
     const data = await res.json();
     setPrice({ hbarPrice: data["hedera-hashgraph"].usd });
   };

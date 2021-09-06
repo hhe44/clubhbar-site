@@ -10,7 +10,7 @@ import sanitizeHtml from "sanitize-html";
 import styles from "../../styles/posts.module.scss";
 
 export async function getServerSideProps() {
-  const res = await fetch(`https://clubhbar-strapi.herokuapp.com/home`);
+  const res = await fetch(`${process.env.STRAPI_URL}/home`);
   const postData = await res.json();
   return {
     props: { postData },
@@ -31,7 +31,7 @@ const Post = ({ postData }) => {
       setContent({ result });
     };
     processRawText();
-  }, []);
+  }, [text]);
   const cleanHtml = sanitizeHtml(content.result);
 
   return (
@@ -48,13 +48,13 @@ const Post = ({ postData }) => {
           </h3>
           <img
             className={styles.cover}
+            alt={`https://clubhbar-strapi.herokuapp.com${cover.formats.large.name}`}
             src={`https://clubhbar-strapi.herokuapp.com${cover.formats.large.url}`}
           />
           <div
             className={styles.postText}
             dangerouslySetInnerHTML={{ __html: cleanHtml }}
           />
-          {/* <div><p>{text}</p></div> */}
         </article>
       </div>
       <Footer />

@@ -6,7 +6,7 @@ import Footer from "../components/footer";
 import styles from "../styles/home.module.scss";
 
 export async function getStaticProps() {
-  const res = await fetch(`https://clubhbar-strapi.herokuapp.com/home`);
+  const res = await fetch(`${process.env.STRAPI_URL}/home`);
   const postData = await res.json();
   return {
     props: { postData }
@@ -27,7 +27,7 @@ const Home = ({ postData }) => {
                 <Link href={`/posts/${id}`} passHref>
                   <div className={styles.postWrap}>
                     <img
-                      src={`https://clubhbar-strapi.herokuapp.com${cover.formats.thumbnail.url}`}
+                      src={`https://clubhbar-strapi.herokuapp.com${cover.formats.thumbnail.name}`}
                       alt={`https://clubhbar-strapi.herokuapp.com${cover.formats.thumbnail.url}`}
                     />
                     <div>
