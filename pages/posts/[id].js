@@ -47,8 +47,7 @@ const Post = ({ postData }) => {
             <Date dateString={post.create_date} />
           </h3>
           <img
-            className={styles.cover}
-            alt={`https://clubhbar-strapi.herokuapp.com${cover.formats.large.name}`}
+            className={styles.cover} alt={`${cover.formats.large.name}`}
             src={`https://clubhbar-strapi.herokuapp.com${cover.formats.large.url}`}
           />
           <div
