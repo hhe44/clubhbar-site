@@ -48,7 +48,7 @@ const Post = ({ postData }) => {
           </h3>
           <img
             className={styles.cover} alt={`${cover.formats.large.name}`}
-            src={`https://clubhbar-strapi.herokuapp.com${cover.formats.large.url}`}
+            src={`${cover.formats.large.url}`}
           />
           <div
             className={styles.postText}

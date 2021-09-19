@@ -28,7 +28,7 @@ const Home = ({ postData }) => {
                   <div className={styles.postWrap}>
                     <img
                       alt={`${cover.formats.thumbnail.name}`}
-                      src={`https://clubhbar-strapi.herokuapp.com${cover.formats.thumbnail.url}`}
+                      src={`${cover.formats.thumbnail.url}`}
                     />
                     <div>
                       <h3>{title}</h3>
