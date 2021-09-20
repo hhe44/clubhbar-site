@@ -30,6 +30,9 @@
 
 .postText {
   font-size: 0.9rem;
+  img {
+    width: 100%;
+  }
 }
 
 @media (min-width: 600px) {
