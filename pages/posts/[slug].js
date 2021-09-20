@@ -10,7 +10,7 @@ import sanitizeHtml from "sanitize-html";
 import styles from "../../styles/posts.module.scss";
 
 export async function getServerSideProps() {
-  const res = await fetch(`${process.env.STRAPI_URL}/home`);
+  const res = await fetch(`${process.env.STRAPI_URL}/posts`);
   const postData = await res.json();
   return {
     props: { postData },
@@ -18,10 +18,9 @@ export async function getServerSideProps() {
 }
 
 const Post = ({ postData }) => {
-
   const { asPath } = useRouter();
-  const id = asPath.slice(-1);
-  const post = postData.posts[id - 1];
+  const slug = asPath.split("/").at(-1);
+  const post = postData.find((post) => post.slug == slug);
   const { title, text, cover } = post;
 
   const [content, setContent] = useState({});
@@ -44,10 +43,11 @@ const Post = ({ postData }) => {
         <article className={styles.content}>
           <h1>{title}</h1>
           <h3>
-            <Date dateString={post.create_date} />
+            <Date dateString={post.created_at} />
           </h3>
           <img
-            className={styles.cover} alt={`${cover.formats.large.name}`}
+            className={styles.cover}
+            alt={`${cover.formats.large.name}`}
             src={`${cover.formats.large.url}`}
           />
           <div

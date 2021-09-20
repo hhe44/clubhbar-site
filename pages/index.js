@@ -6,7 +6,7 @@ import Footer from "../components/footer";
 import styles from "../styles/home.module.scss";
 
 export async function getStaticProps() {
-  const res = await fetch(`${process.env.STRAPI_URL}/home`);
+  const res = await fetch(`${process.env.STRAPI_URL}/posts`);
   const postData = await res.json();
   return {
     props: { postData }
@@ -14,6 +14,9 @@ export async function getStaticProps() {
 }
 
 const Home = ({ postData }) => {
+
+  const posts = postData.slice(-3).reverse();
+
   return (
     <>
       <Navbar />
@@ -22,9 +25,9 @@ const Home = ({ postData }) => {
         <div className={styles.news}>
           <h3>LATEST NEWS</h3>
           <div className={styles.posts}>
-            {postData.posts.map(({ id, title, blurb, cover }) => (
+            {posts.map(({ id, title, blurb, cover, slug }) => (
               <div key={`post_${id}`}>
-                <Link href={`/posts/${id}`} passHref>
+                <Link href={`/posts/${slug}`} passHref>
                   <div className={styles.postWrap}>
                     <img
                       alt={`${cover.formats.thumbnail.name}`}
