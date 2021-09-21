@@ -4,7 +4,7 @@ import background from "../public/images/clubhbar-hashgraph-bgasd.svg";
 import logo from "../public/images/clubhbar-logo.svg";
 import YtModal from "../components/ytModal";
 
-const Hero = () => {
+const Hero = ({ vidkey }) => {
   return (
     <div className={styles.container}>
       {/* 
@@ -24,7 +24,7 @@ const Hero = () => {
       <div className={styles.content}>
         <div className={styles.topWrap}>
           <div className={styles.video}>
-            <YtModal vidKey={`JzFXZvTrEnI`} />
+            <YtModal vidKey={vidkey} />
           </div>
           <div className={styles.logoWrap}>
             <div className={styles.logo}>

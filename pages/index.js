@@ -6,21 +6,27 @@ import Footer from "../components/footer";
 import styles from "../styles/home.module.scss";
 
 export async function getStaticProps() {
-  const res = await fetch(`${process.env.STRAPI_URL}/posts`);
-  const postData = await res.json();
+  const postsRes = await fetch(`${process.env.STRAPI_URL}/posts`);
+  const postData = await postsRes.json();
+  const homeRes = await fetch(`${process.env.STRAPI_URL}/home`);
+  const homeData = await homeRes.json();
   return {
-    props: { postData }
+    props: { postData, homeData },
   };
 }
 
-const Home = ({ postData }) => {
+const Home = ({ postData, homeData }) => {
 
+  // Grab latest 3 posts to display on news section...
   const posts = postData.slice(-3).reverse();
+  const { youtubeUrl } = homeData.welcomeVideo;
+  // Split youtube video to obtain vidkey after equal symbol...
+  const vidKey = youtubeUrl.split("=")[1];
 
   return (
     <>
       <Navbar />
-      <Hero />
+      <Hero vidkey={vidKey} />
       <div className={styles.container}>
         <div className={styles.news}>
           <h3>LATEST NEWS</h3>
