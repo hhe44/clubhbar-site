@@ -42,7 +42,7 @@ const Navbar = ({ isHomePage = false, isChartPage = false }) => {
         <Link href="/">HOME</Link>
         <Link href="/learn">LEARN</Link>
         <Link href="/news">NEWS</Link>
-        <Link href="/community">COMMUNITY</Link>
+        {/* <Link href="/community">COMMUNITY</Link> */}
         <Link href="/charts">CHARTS</Link>
       </div>
       <div className={styles.price}>
