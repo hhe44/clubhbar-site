@@ -11,6 +11,7 @@ export async function getStaticProps() {
   const learnData = await res.json();
   return {
     props: { learnData },
+    revalidate: 60,
   };
 }
 

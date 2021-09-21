@@ -12,6 +12,7 @@ export async function getStaticProps() {
   const homeData = await homeRes.json();
   return {
     props: { postData, homeData },
+    revalidate: 60,
   };
 }
 
