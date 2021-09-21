@@ -26,14 +26,14 @@ const Post = ({ postData }) => {
   const { title, text, cover } = post;
 
   const [content, setContent] = useState({});
-  const processRawText = async () => {
-    const result = await remark()
-      .use(remarkUnwrapImages)
-      .use(remarkHtml)
-      .process(text);
-    setContent({ result });
-  };
   useEffect(() => {
+    const processRawText = async () => {
+      const result = await remark()
+        .use(remarkUnwrapImages)
+        .use(remarkHtml)
+        .process(text);
+      setContent({ result });
+    };
     processRawText();
   }, [text]);
   const postHtml = content.result || "<h1>Loading...</h1>";

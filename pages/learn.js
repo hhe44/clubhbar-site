@@ -36,8 +36,11 @@ const Learn = ({ learnData }) => {
             <div className={styles.crashCourse}>
               <h1>HEDERA HASHGRAPH CRASH COURSE</h1>
               <div className={styles.vidWrap}>
-                {crashcourse.map(({ youtubeUrl }) => (
-                  <YtModal vidKey={youtubeUrl.split("=")[1]} />
+                {crashcourse.map(({ id, youtubeUrl }) => (
+                  <YtModal
+                    key={`crashcourse_${id}`}
+                    vidKey={youtubeUrl.split("=")[1]}
+                  />
                 ))}
               </div>
             </div>
@@ -45,26 +48,19 @@ const Learn = ({ learnData }) => {
           <div className={styles.bottomRow}>
             <div className={styles.adoption}>
               <h1>ADOPTION</h1>
-              {adoptionTweets.map(({tweetUrl}) => (
-                <Tweet 
-                  tweetId={tweetUrl.split('/').splice(-1)[0]}
+              {adoptionTweets.map(({ id, tweetUrl }) => (
+                <Tweet
+                  key={`adoptiontweet_${id}`}
+                  tweetId={tweetUrl.split("/").splice(-1)[0]}
                   options={{ theme: "dark" }}
                 />
               ))}
-              {/* <Tweet
-                tweetId="1401996757479956497"
-                options={{ theme: "dark" }}
-              />
-              <Tweet
-                tweetId="1402958509206089730"
-                options={{ theme: "dark" }}
-              /> */}
             </div>
             <div className={styles.hbarShillPane}>
               <h1>WHY HBAR?</h1>
               <div className={styles.vidWrap}>
-                {whyhbar.map(({ title,youtubeUrl }) => (
-                  <div>
+                {whyhbar.map(({ id, title, youtubeUrl }) => (
+                  <div key={`whyhbar_${id}`}>
                     <h3>{title}</h3>
                     <YtModal vidKey={youtubeUrl.split("=")[1]} />
                   </div>
