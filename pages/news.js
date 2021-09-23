@@ -38,7 +38,7 @@ const News = ({ newsData }) => {
               <div>
                 {featured.map(({ id, title, url, cover }) => (
                   <div key={`featured_${id}`}>
-                    <a href={url} target="_blank">
+                    <a href={url} target="_blank" rel="noreferrer">
                       <div className={styles.titleWrap}>
                         <h3>{title}</h3>
                       </div>
@@ -58,7 +58,7 @@ const News = ({ newsData }) => {
               <div>
                 {articles.map(({ id, title, url, cover }) => (
                   <div key={`article_${id}`}>
-                    <a href={url} target="_blank">
+                    <a href={url} target="_blank" rel="noreferrer">
                       <div className={styles.titleWrap}>
                         <h3>{title}</h3>
                       </div>
@@ -75,7 +75,7 @@ const News = ({ newsData }) => {
               <h1>TWEETS</h1>
               {tweets.map(({ id, tweetUrl }) => (
                 <Tweet
-                  key={`adoptiontweet_${id}`}
+                  key={`tweet_${id}`}
                   tweetId={tweetUrl.split("/").splice(-1)[0]}
                   options={{ theme: "dark" }}
                 />
