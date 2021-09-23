@@ -17,7 +17,6 @@ export async function getStaticProps() {
 
 const Learn = ({ learnData }) => {
   const { adoptionTweets, crashcourse, whyhbar } = learnData;
-
   return (
     <>
       <Navbar />
