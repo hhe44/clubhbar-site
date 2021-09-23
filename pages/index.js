@@ -26,7 +26,7 @@ const Home = ({ postData, homeData }) => {
 
   return (
     <>
-      <Navbar />
+      <Navbar isHomePage={true} />
       <Hero vidkey={vidKey} />
       <div className={styles.container}>
         <div className={styles.news}>

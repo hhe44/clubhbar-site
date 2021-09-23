@@ -18,6 +18,7 @@
   position: absolute;
   overflow: hidden;
   z-index: 1;
+  filter: brightness(90%);
   background-color: $main-bg-color;
 }
 
