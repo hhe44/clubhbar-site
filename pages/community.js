@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import background from "../public/images/clubhbar-hashgraph-bgasd.svg";
+import background from "../public/images/clubhbar-hashgraph-bg-bw.svg";
 import styles from "../styles/community.module.scss";
 
 const Community = () => {

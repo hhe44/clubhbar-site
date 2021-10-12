@@ -1,6 +1,7 @@
 @import "../styles/theme.scss";
 
 .container {
+  background: linear-gradient(145deg, rgba(21,28,121,0.8547619731486344) 0%, rgba(0,0,0,0) 50%, rgba(58,3,71,0.7651261188068977) 100%);
   font-family: $text-font;
   font-weight: $text-weight;
   color: $main-text-color;
@@ -12,7 +13,6 @@
   position: absolute;
   overflow: hidden;
   z-index: -1;
-  filter: brightness(90%);
   background-color: $main-bg-color;
 }
 

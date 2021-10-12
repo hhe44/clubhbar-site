@@ -46,7 +46,7 @@ const Navbar = ({ isHomePage = false, isChartPage = false }) => {
         <Link href="/charts">CHARTS</Link>
       </div>
       <div className={styles.price}>
-        <h4>{!isHomePage ? "Largest HBAR Community on the Net" : ""}</h4>
+        <h4>{!isHomePage ? "Premiere Community for HBAR Content, News and Networking" : ""}</h4>
         {!isChartPage && (
           <div>
             <p>{`Current HBAR Price: $${hbarPrice}`}</p>

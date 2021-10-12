@@ -3,7 +3,7 @@ import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import YtModal from "../components/ytModal";
 import { Tweet } from "react-twitter-widgets";
-import background from "../public/images/clubhbar-hashgraph-bgasd.svg";
+import background from "../public/images/clubhbar-hashgraph-bg-bw.svg";
 import styles from "../styles/learn.module.scss";
 
 export async function getStaticProps() {

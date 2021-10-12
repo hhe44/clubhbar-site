@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./hero.module.scss";
-import background from "../public/images/clubhbar-hashgraph-bgasd.svg";
+import background from "../public/images/clubhbar-hashgraph-bg-bw.svg";
 import logo from "../public/images/clubhbar-logo.svg";
 import YtModal from "../components/ytModal";
 
@@ -36,11 +36,11 @@ const Hero = ({ vidkey }) => {
                 quality={50}
               />
             </div>
-            <h1>The Largest HBAR Community on the Net</h1>
+            <h1>Premiere Community for HBAR Content, News and Networking</h1>
           </div>
         </div>
         <div className={styles.bottomWrap}>
-          <h1>The Largest HBAR Community on the Net</h1>
+          <h1>Premiere Community for HBAR Content, News and Networking</h1>
         </div>
       </div>
     </div>

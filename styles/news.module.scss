@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: $main-bg-color;
+  background: $main-bg-color;
   font-family: $text-font;
   font-weight: $text-weight;
   color: $main-text-color;
@@ -16,7 +16,6 @@
   width: 100%;
   position: absolute;
   overflow: hidden;
-  filter: brightness(90%);
   background-color: $main-bg-color;
 }
 
@@ -54,6 +53,10 @@
   > div {
     background-color: $content-bg-color;
   }
+}
+
+.featuredNews { 
+  background: linear-gradient(145deg, rgba(21, 28, 77, 0.8547619731) 0%, rgba(0, 0, 0, 0) 50%);
 }
 
 .featuredNews,
