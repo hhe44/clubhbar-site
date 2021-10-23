@@ -5,7 +5,7 @@ class MyDocument extends Document {
 		return (
 			<Html>
 				<Head>
-          {/* General meta tags */}
+          			{/* General meta tags */}
 					<meta name="description" content="Premiere Community for HBAR Content, News and Networking" />
 					<meta property="og:title" content="Club HBAR" />
 					<meta property="og:description" content="Premiere Community for HBAR Content, News and Networking" />
@@ -13,7 +13,7 @@ class MyDocument extends Document {
 					<meta property="og:url" content="https://www.clubhbar.com/" />
 					<meta property="og:image" content="https://res.cloudinary.com/drrsuk4nc/image/upload/v1634949586/meta-img-club-hbar_gcar57.png" />
 					<meta property="og:site_name" content="Club HBAR" />
-          {/* Twitter Meta Tags */}
+          			{/* Twitter Meta Tags */}
 					<meta name="twitter:card" content="summary_large_image" />
 					<meta name="twitter:title" content="Club HBAR" />
 					<meta name="twitter:image" content="https://res.cloudinary.com/drrsuk4nc/image/upload/v1634949586/meta-img-club-hbar_gcar57.png" />

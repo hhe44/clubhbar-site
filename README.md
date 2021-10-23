@@ -8,6 +8,7 @@ Community project for Hedera Hashgraph enthusiasts, AKA Hashbros, AKA bagholders
 
 ### Guides used throughout Development:
 * [CoinGecko API Documentation](https://www.coingecko.com/api/documentations/v3#/coins/get_coins_list)
+* [Google Analytics Setup With Next.JS](https://blog.jarrodwatts.com/track-user-behaviour-on-your-website-with-google-analytics-and-nextjs)
 * [Next.js CSS Modules Tweak for Typescript](https://github.com/vercel/next.js/issues/9690)
 * [Next.js Font Optimization](https://nextjs.org/docs/basic-features/font-optimization)
 * [Next.js Image Layout Examples](https://github.com/vercel/next.js/tree/canary/examples/image-component/pages)
